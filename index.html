@@ -52,21 +52,21 @@
       <section id="doc-structure">
         <h3>Document Structure</h3>
         <p>Every HTML file follows a nested structure:</p>
-        <pre><code>&lt;!DOCTYPE html&gt;
+        <pre><code>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;!-- metadata, CSS/JS links, title, etc. --&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    <!-- Visible content goes here -->
+    &lt;!-- visible content goes here --&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+        </code></pre>
         <ul>
           <li><strong>&lt;!DOCTYPE html&gt;</strong> – declares the document as HTML5.</li>
           <li><strong>&lt;html&gt;</strong> – root element; the <code>lang</code> attribute sets the page language.</li>
-          <li><strong>&lt;head&gt;</strong> – contains metadata, links to CSS/JS, page <title>, etc.</li>
+          <li><strong>&lt;head&gt;</strong> – contains metadata, links to CSS/JS, page <strong>&lt;title&gt;</strong>, etc.</li>
           <li><strong>&lt;body&gt;</strong> – everything inside appears in the browser window.</li>
         </ul>
       </section>
@@ -99,7 +99,7 @@
         <h3>Text &amp; Formatting</h3>
         <p>Common tags to structure and style text:</p>
         <ul>
-          <li><strong>&lt;h1&gt;…&lt;h6&gt;</strong> – headings, "<code>h1</code>" is largest, "<code>h6</code>" is smallest.</li>
+          <li><strong>&lt;h1&gt;…&lt;h6&gt;</strong> – headings; <code>h1</code> is largest, <code>h6</code> is smallest.</li>
           <li><strong>&lt;p&gt;</strong> – paragraph block. Example:
             <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
           </li>
@@ -296,8 +296,8 @@
           <li><strong>element element</strong> – descendant selector (nested). Example:
             <pre><code>nav a { text-decoration: none; }</code></pre>
           </li>
-          <li><strong>element > element</strong> – direct child. Example:
-            <pre><code>ul > li { list-style: square; }</code></pre>
+          <li><strong>element &gt; element</strong> – direct child. Example:
+            <pre><code>ul &gt; li { list-style: square; }</code></pre>
           </li>
         </ul>
       </section>
@@ -454,8 +454,8 @@
           <li><strong>display: grid;</strong> – turns a container into a grid parent.</li>
           <li><strong>grid-template-columns</strong> – defines columns (repeat, px, %, fr units).</li>
           <li><strong>grid-template-rows</strong> – defines row sizes.</li>
-          <li><strong>gap</strong> - spacing between grid items (row-gap, column-gap).</li>
-          <li><strong>grid-area</strong> - assign items to named areas (more advanced).</li>
+          <li><strong>gap</strong> – spacing between grid items (row-gap, column-gap).</li>
+          <li><strong>grid-area</strong> – assign items to named areas (more advanced).</li>
         </ul>
       </section>
 
@@ -464,7 +464,7 @@
         <h3>Animations &amp; Effects</h3>
         <p>Make elements move or change over time:</p>
         <ul>
-          <li><strong>transition</strong> - smooth change of property when its value changes. Example:
+          <li><strong>transition</strong> – smooth change of property when its value changes. Example:
             <pre><code>.button {
   background-color: #008CBA;
   transition: background-color 0.3s ease;
@@ -473,7 +473,7 @@
   background-color: #005f7a;
 }</code></pre>
           </li>
-          <li><strong>animation</strong> - define keyframe animations. Example:
+          <li><strong>animation</strong> – define keyframe animations. Example:
             <pre><code>@keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -482,17 +482,17 @@
   animation: fade-in 2s ease-in-out;
 }</code></pre>
           </li>
-          <li><strong>transform</strong> - rotate, scale, skew, or translate elements. Example:
+          <li><strong>transform</strong> – rotate, scale, skew, or translate elements. Example:
             <pre><code>.rotate-45 {
   transform: rotate(45deg);
 }</code></pre>
           </li>
-          <li><strong>box-shadow</strong> - shadow effect around a box. Example:
+          <li><strong>box-shadow</strong> – shadow effect around a box. Example:
             <pre><code>.card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }</code></pre>
           </li>
-          <li><strong>filter</strong> - visual effects such as blur, grayscale, contrast. Example:
+          <li><strong>filter</strong> – visual effects such as blur, grayscale, contrast. Example:
             <pre><code>img.grayscale {
   filter: grayscale(100%);
 }</code></pre>
