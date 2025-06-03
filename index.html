@@ -1,0 +1,509 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML &amp; CSS Reference</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>HTML &amp; CSS Reference</h1>
+    <p>A quick, easy‐to‐understand guide with live code examples.</p>
+  </header>
+
+  <nav>
+    <h2>Contents</h2>
+    <ul>
+      <li><a href="#html-basics">HTML Basics</a>
+        <ul>
+          <li><a href="#doc-structure">Document Structure</a></li>
+          <li><a href="#head-section">Head Section</a></li>
+          <li><a href="#text-formatting">Text &amp; Formatting</a></li>
+          <li><a href="#lists">Lists</a></li>
+          <li><a href="#links-media">Links &amp; Media</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#forms-inputs">Forms &amp; Inputs</a></li>
+          <li><a href="#layout-sections">Layout &amp; Semantic Sections</a></li>
+        </ul>
+      </li>
+      <li><a href="#css-basics">CSS Basics</a>
+        <ul>
+          <li><a href="#selectors">Selectors</a></li>
+          <li><a href="#box-model">Box Model</a></li>
+          <li><a href="#text-fonts">Text &amp; Fonts</a></li>
+          <li><a href="#background-colors">Background &amp; Colors</a></li>
+          <li><a href="#positioning">Positioning</a></li>
+          <li><a href="#flexbox">Flexbox</a></li>
+          <li><a href="#grid">Grid</a></li>
+          <li><a href="#animations-effects">Animations &amp; Effects</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ========================== -->
+    <section id="html-basics">
+      <h2>HTML Basics</h2>
+
+      <!-- Document Structure -->
+      <section id="doc-structure">
+        <h3>Document Structure</h3>
+        <p>Every HTML file follows a nested structure:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    <!-- Visible content goes here -->
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <ul>
+          <li><strong>&lt;!DOCTYPE html&gt;</strong> – declares the document as HTML5.</li>
+          <li><strong>&lt;html&gt;</strong> – root element; the <code>lang</code> attribute sets the page language.</li>
+          <li><strong>&lt;head&gt;</strong> – contains metadata, links to CSS/JS, page <title>, etc.</li>
+          <li><strong>&lt;body&gt;</strong> – everything inside appears in the browser window.</li>
+        </ul>
+      </section>
+
+      <!-- Head Section -->
+      <section id="head-section">
+        <h3>Head Section</h3>
+        <p>Inside <code>&lt;head&gt;</code>, you declare metadata and load external resources:</p>
+        <ul>
+          <li><strong>&lt;title&gt;</strong> – text that shows in the browser tab.</li>
+          <li><strong>&lt;meta&gt;</strong> – provides info like character set or viewport. For example:
+            <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+          </li>
+          <li><strong>&lt;link&gt;</strong> – links to external CSS files:
+            <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+          </li>
+          <li><strong>&lt;style&gt;</strong> – adds internal CSS directly:
+            <pre><code>&lt;style&gt;
+  body { background-color: #f0f0f0; }
+&lt;/style&gt;</code></pre>
+          </li>
+          <li><strong>&lt;script&gt;</strong> – embeds or links to JavaScript:
+            <pre><code>&lt;script src="app.js"&gt;&lt;/script&gt;</code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Text & Formatting -->
+      <section id="text-formatting">
+        <h3>Text &amp; Formatting</h3>
+        <p>Common tags to structure and style text:</p>
+        <ul>
+          <li><strong>&lt;h1&gt;…&lt;h6&gt;</strong> – headings, "<code>h1</code>" is largest, "<code>h6</code>" is smallest.</li>
+          <li><strong>&lt;p&gt;</strong> – paragraph block. Example:
+            <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+          </li>
+          <li><strong>&lt;strong&gt;</strong> – bold text. Example:
+            <pre><code>&lt;strong&gt;Important!&lt;/strong&gt;</code></pre>
+          </li>
+          <li><strong>&lt;em&gt;</strong> – italicized (emphasis). Example:
+            <pre><code>&lt;em&gt;Emphasized text&lt;/em&gt;</code></pre>
+          </li>
+          <li><strong>&lt;span&gt;</strong> – inline container for styling or scripting. Example:
+            <pre><code>&lt;span class="highlight"&gt;Colored text&lt;/span&gt;</code></pre>
+          </li>
+          <li><strong>&lt;div&gt;</strong> – block container used for grouping, layout, and styling. Example:
+            <pre><code>&lt;div class="card"&gt;
+  &lt;p&gt;Card content here.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Lists -->
+      <section id="lists">
+        <h3>Lists</h3>
+        <p>Two types of lists are most common:</p>
+        <ul>
+          <li><strong>&lt;ul&gt;</strong> – unordered (bulleted) list:
+            <pre><code>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          </li>
+          <li><strong>&lt;ol&gt;</strong> – ordered (numbered) list:
+            <pre><code>&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </li>
+          <li><strong>&lt;li&gt;</strong> – list item (used inside <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>).</li>
+        </ul>
+      </section>
+
+      <!-- Links & Media -->
+      <section id="links-media">
+        <h3>Links &amp; Media</h3>
+        <ul>
+          <li><strong>&lt;a&gt;</strong> – anchor/hyperlink:
+            <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;</code></pre>
+          </li>
+          <li><strong>&lt;img&gt;</strong> – image tag (self-closing). Example:
+            <pre><code>&lt;img src="photo.jpg" alt="A descriptive text" width="200"&gt;</code></pre>
+          </li>
+          <li><strong>&lt;video&gt;</strong> – embed a video:
+            <pre><code>&lt;video controls width="320"&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  Your browser does not support video tag.
+&lt;/video&gt;</code></pre>
+          </li>
+          <li><strong>&lt;audio&gt;</strong> – embed audio:
+            <pre><code>&lt;audio controls&gt;
+  &lt;source src="sound.mp3" type="audio/mp3"&gt;
+  Your browser does not support audio element.
+&lt;/audio&gt;</code></pre>
+          </li>
+          <li><strong>&lt;iframe&gt;</strong> – embed another webpage:
+            <pre><code>&lt;iframe src="https://example.com" width="600" height="400"&gt;&lt;/iframe&gt;</code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Tables -->
+      <section id="tables">
+        <h3>Tables</h3>
+        <p>Use tables for tabular data:</p>
+        <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alice&lt;/td&gt;
+    &lt;td&gt;30&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Bob&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <ul>
+          <li><strong>&lt;table&gt;</strong> – wraps the entire table.</li>
+          <li><strong>&lt;tr&gt;</strong> – table row.</li>
+          <li><strong>&lt;th&gt;</strong> – header cell (usually bold/centered).</li>
+          <li><strong>&lt;td&gt;</strong> – data cell.</li>
+        </ul>
+      </section>
+
+      <!-- Forms & Inputs -->
+      <section id="forms-inputs">
+        <h3>Forms &amp; Inputs</h3>
+        <p>Collect user input using forms:</p>
+        <pre><code>&lt;form action="/submit" method="POST"&gt;
+  &lt;label for="username"&gt;Username:&lt;/label&gt;
+  &lt;input type="text" id="username" name="username" placeholder="Enter name"&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+
+  &lt;label for="bio"&gt;Bio:&lt;/label&gt;
+  &lt;textarea id="bio" name="bio" rows="4" cols="30"&gt;&lt;/textarea&gt;
+
+  &lt;label for="country"&gt;Country:&lt;/label&gt;
+  &lt;select id="country" name="country"&gt;
+    &lt;option value="us"&gt;United States&lt;/option&gt;
+    &lt;option value="ca"&gt;Canada&lt;/option&gt;
+    &lt;option value="other"&gt;Other&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        <ul>
+          <li><strong>&lt;form&gt;</strong> – container for form fields; has attributes <code>action</code> and <code>method</code>.</li>
+          <li><strong>&lt;input&gt;</strong> – single‐line input (type text, email, number, etc.).</li>
+          <li><strong>&lt;button&gt;</strong> – clickable button (can be <code>submit</code>, <code>reset</code>, or <code>button</code>).</li>
+          <li><strong>&lt;textarea&gt;</strong> – multiline text input.</li>
+          <li><strong>&lt;label&gt;</strong> – labels an input, improves accessibility; the <code>for</code> attribute must match the input’s <code>id</code>.</li>
+          <li><strong>&lt;select&gt;</strong> – dropdown list; contains <code>&lt;option&gt;</code> elements.</li>
+        </ul>
+      </section>
+
+      <!-- Layout & Semantic Sections -->
+      <section id="layout-sections">
+        <h3>Layout &amp; Semantic Sections</h3>
+        <p>Use semantic tags to structure your page:</p>
+        <ul>
+          <li><strong>&lt;header&gt;</strong> – top section of a page or article (often contains logo/navigation).</li>
+          <li><strong>&lt;nav&gt;</strong> – navigation links (menus).</li>
+          <li><strong>&lt;main&gt;</strong> – main content area (only one per page).</li>
+          <li><strong>&lt;section&gt;</strong> – thematic grouping of content with a heading.</li>
+          <li><strong>&lt;article&gt;</strong> – independent, self‐contained piece (e.g., blog post).</li>
+          <li><strong>&lt;aside&gt;</strong> – sidebar or tangential content (ads, links).</li>
+          <li><strong>&lt;footer&gt;</strong> – bottom section (copyright, footnotes).</li>
+        </ul>
+        <p>Example:</p>
+        <pre><code>&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;h2&gt;About&lt;/h2&gt;
+    &lt;p&gt;Some introduction.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;article&gt;
+    &lt;h2&gt;Blog Post Title&lt;/h2&gt;
+    &lt;p&gt;Written content here.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;Related links or ads&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;© 2025 My Site&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+      </section>
+    </section>
+
+    <!-- ========================== -->
+    <section id="css-basics">
+      <h2>CSS Basics</h2>
+
+      <!-- Selectors -->
+      <section id="selectors">
+        <h3>Selectors</h3>
+        <p>CSS selectors choose which HTML elements to style:</p>
+        <ul>
+          <li><strong>*</strong> – selects <em>all</em> elements. Example:
+            <pre><code>* { box-sizing: border-box; }</code></pre>
+          </li>
+          <li><strong>element</strong> – selects all elements of that type. Example:
+            <pre><code>p { color: #333; }</code></pre>
+          </li>
+          <li><strong>.class</strong> – selects all elements with that class. Example:
+            <pre><code>.button { padding: 10px; }</code></pre>
+          </li>
+          <li><strong>#id</strong> – selects the element with that ID. Example:
+            <pre><code>#header { background: #f8f8f8; }</code></pre>
+          </li>
+          <li><strong>element, element</strong> – comma separates multiple selectors. Example:
+            <pre><code>h1, h2, h3 { margin-top: 0; }</code></pre>
+          </li>
+          <li><strong>element element</strong> – descendant selector (nested). Example:
+            <pre><code>nav a { text-decoration: none; }</code></pre>
+          </li>
+          <li><strong>element > element</strong> – direct child. Example:
+            <pre><code>ul > li { list-style: square; }</code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Box Model -->
+      <section id="box-model">
+        <h3>Box Model</h3>
+        <p>Every element is a rectangular “box” consisting of:</p>
+        <ul>
+          <li><strong>content</strong> – where text and images appear.</li>
+          <li><strong>padding</strong> – space between content and border.</li>
+          <li><strong>border</strong> – outlining around padding/content.</li>
+          <li><strong>margin</strong> – space outside the border.</li>
+        </ul>
+        <p>Example:</p>
+        <pre><code>.card {
+  width: 300px;
+  padding: 20px;     /* inside spacing */
+  border: 1px solid #ccc;
+  margin: 10px auto; /* outside spacing and center alignment */
+}</code></pre>
+        <p><strong>box-sizing:</strong> by default, <code>width</code> and <code>height</code> do <em>not</em> include padding/border. If you want them included, add:</p>
+        <pre><code>*, *::before, *::after {
+  box-sizing: border-box;
+}</code></pre>
+      </section>
+
+      <!-- Text & Fonts -->
+      <section id="text-fonts">
+        <h3>Text &amp; Fonts</h3>
+        <ul>
+          <li><strong>color</strong> – text color. Example:
+            <pre><code>p { color: #555; }</code></pre>
+          </li>
+          <li><strong>font-size</strong> – size of text. Example:
+            <pre><code>h1 { font-size: 2rem; }</code></pre>
+          </li>
+          <li><strong>font-family</strong> – typeface. Example:
+            <pre><code>body { font-family: Arial, sans-serif; }</code></pre>
+          </li>
+          <li><strong>font-weight</strong> – how bold. Example:
+            <pre><code>strong { font-weight: bold; }</code></pre>
+          </li>
+          <li><strong>text-align</strong> – horizontal alignment. Example:
+            <pre><code>h2 { text-align: center; }</code></pre>
+          </li>
+          <li><strong>text-decoration</strong> – underline, line-through, etc. Example:
+            <pre><code>a { text-decoration: none; }</code></pre>
+          </li>
+          <li><strong>line-height</strong> – vertical spacing between lines. Example:
+            <pre><code>p { line-height: 1.5; }</code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Background & Colors -->
+      <section id="background-colors">
+        <h3>Background &amp; Colors</h3>
+        <ul>
+          <li><strong>background-color</strong> – solid color behind content. Example:
+            <pre><code>header { background-color: #4CAF50; }</code></pre>
+          </li>
+          <li><strong>background-image</strong> – set a background image. Example:
+            <pre><code>body {
+  background-image: url('pattern.png');
+  background-size: cover;
+  background-position: center;
+}</code></pre>
+          </li>
+          <li><strong>background-size</strong> – scale the image (cover, contain, px, %). Example above.</li>
+          <li><strong>background-position</strong> – where to position the image (e.g., top left, center).</li>
+          <li><strong>background-repeat</strong> – repeat behavior (repeat-x, repeat-y, no-repeat). Example:
+            <pre><code>div { background-repeat: no-repeat; }</code></pre>
+          </li>
+          <li><strong>opacity</strong> – transparency (0 to 1). Example:
+            <pre><code>.overlay { opacity: 0.5; }</code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Positioning -->
+      <section id="positioning">
+        <h3>Positioning</h3>
+        <p>Control where elements appear:</p>
+        <ul>
+          <li><strong>position: static;</strong> – default flow (ignores top/right/bottom/left).</li>
+          <li><strong>position: relative;</strong> – positioned relative to its normal position. Example:
+            <pre><code>.box { position: relative; left: 10px; top: 5px; }</code></pre>
+          </li>
+          <li><strong>position: absolute;</strong> – positioned relative to the nearest positioned ancestor. Example:
+            <pre><code>.container { position: relative; }
+.child {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}</code></pre>
+          </li>
+          <li><strong>position: fixed;</strong> – fixed relative to the viewport (always stays in place). Example:
+            <pre><code>.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}</code></pre>
+          </li>
+          <li><strong>z-index</strong> – stacking order (higher number is on top). Example:
+            <pre><code>.modal { z-index: 1000; }</code></pre>
+          </li>
+          <li><strong>display</strong> – sets how an element is displayed (block, inline, inline-block, none). Example:
+            <pre><code>span { display: inline-block; }</code></pre>
+          </li>
+          <li><strong>visibility</strong> – visible or hidden (element still occupies space). Example:
+            <pre><code>.hidden { visibility: hidden; }</code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Flexbox -->
+      <section id="flexbox">
+        <h3>Flexbox</h3>
+        <p>Use Flexbox to create flexible, responsive layouts:</p>
+        <pre><code>.container {
+  display: flex; /* enables flex */
+  justify-content: center; /* horizontal alignment */
+  align-items: center; /* vertical alignment */
+  gap: 1rem; /* spacing between flex items */
+}
+.item {
+  flex: 1; /* each item grows equally */
+}</code></pre>
+        <ul>
+          <li><strong>display: flex;</strong> – turns a container into a flexbox parent.</li>
+          <li><strong>justify-content</strong> – horizontal distribution (flex-start, center, space-between, etc.).</li>
+          <li><strong>align-items</strong> – vertical alignment on the cross‐axis (stretch, center, baseline, etc.).</li>
+          <li><strong>flex-direction</strong> – direction of main axis (row, column, row‐reverse, column‐reverse).</li>
+          <li><strong>flex-wrap</strong> – wrap items onto multiple lines if needed (nowrap, wrap, wrap‐reverse).</li>
+        </ul>
+      </section>
+
+      <!-- Grid -->
+      <section id="grid">
+        <h3>Grid</h3>
+        <p>CSS Grid lets you create two‐dimensional layouts:</p>
+        <pre><code>.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: auto;
+  gap: 10px;
+}
+.grid-item {
+  background-color: #eee;
+  padding: 1rem;
+}</code></pre>
+        <ul>
+          <li><strong>display: grid;</strong> – turns a container into a grid parent.</li>
+          <li><strong>grid-template-columns</strong> – defines columns (repeat, px, %, fr units).</li>
+          <li><strong>grid-template-rows</strong> – defines row sizes.</li>
+          <li><strong>gap</strong> - spacing between grid items (row-gap, column-gap).</li>
+          <li><strong>grid-area</strong> - assign items to named areas (more advanced).</li>
+        </ul>
+      </section>
+
+      <!-- Animations & Effects -->
+      <section id="animations-effects">
+        <h3>Animations &amp; Effects</h3>
+        <p>Make elements move or change over time:</p>
+        <ul>
+          <li><strong>transition</strong> - smooth change of property when its value changes. Example:
+            <pre><code>.button {
+  background-color: #008CBA;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #005f7a;
+}</code></pre>
+          </li>
+          <li><strong>animation</strong> - define keyframe animations. Example:
+            <pre><code>@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in {
+  animation: fade-in 2s ease-in-out;
+}</code></pre>
+          </li>
+          <li><strong>transform</strong> - rotate, scale, skew, or translate elements. Example:
+            <pre><code>.rotate-45 {
+  transform: rotate(45deg);
+}</code></pre>
+          </li>
+          <li><strong>box-shadow</strong> - shadow effect around a box. Example:
+            <pre><code>.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}</code></pre>
+          </li>
+          <li><strong>filter</strong> - visual effects such as blur, grayscale, contrast. Example:
+            <pre><code>img.grayscale {
+  filter: grayscale(100%);
+}</code></pre>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Your Name • Last updated: June 3, 2025</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+/* style.css */
+
+/* ================== Global Resets ================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== Typography & Body ================== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ================== Header ================== */
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+header p {
+  font-size: 1rem;
+}
+
+/* ================== Layout: Nav + Main ================== */
+nav {
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  width: 250px;
+  padding: 1rem;
+  overflow-y: auto;
+}
+nav h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  margin-bottom: 0.5rem;
+}
+nav a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+nav li ul {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+}
+nav li ul li {
+  margin-bottom: 0.25rem;
+  font-weight: normal;
+}
+
+/* Container for nav + main content */
+main {
+  display: flex;
+  flex: 1;
+}
+
+/* ================== Main Content ================== */
+main > section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  overflow-y: auto;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+section h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #4CAF50;
+}
+section p {
+  margin-bottom: 1rem;
+}
+section ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+section ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* ================== Code Blocks ================== */
+pre {
+  background-color: #f4f4f4;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ================== Footer ================== */
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+/* ================== Responsive Adjustments ================== */
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+  nav {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  main {
+    flex-direction: column;
+  }
+}
